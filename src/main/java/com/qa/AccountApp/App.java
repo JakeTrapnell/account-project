@@ -1,10 +1,6 @@
 package com.qa.AccountApp;
 import com.google.gson.Gson;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
 	static Service service = new Service();
@@ -18,6 +14,7 @@ public class App
     	System.out.println(service.findbyId(1, service.map).getFirstName());
     	System.out.println(service.findbyId(1, service.map).getLastName());
     	System.out.println(service.findbyId(1, service.map).getAccountNum());
+    	
     	
     	Gson gson = new Gson();
     	String json = gson.toJson(service);

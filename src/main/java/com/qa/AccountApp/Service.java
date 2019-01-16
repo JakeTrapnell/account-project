@@ -2,6 +2,7 @@ package com.qa.AccountApp;
 
 import java.util.HashMap;
 
+
 public class Service {
 
 	int idNum = 0;
@@ -27,6 +28,19 @@ public class Service {
 	public Account findbyId(int id, HashMap<?, ?> map) {
 		
 		return (Account) map.get(id);
+	}
+	
+	public int numberOfName(String name) {
+		int count = 0;
+		
+		for(int i=1; i <= map.size(); i++) {
+			String foundName = findbyId(i, map).getFirstName();
+			
+			if(foundName.equals(name)) {
+				count = count +1;
+			}
+		}
+		return count;
 	}
 
 }
